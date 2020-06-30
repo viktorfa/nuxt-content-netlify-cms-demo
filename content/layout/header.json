@@ -3,6 +3,10 @@
     {
       "href": "/blog",
       "text": "Blog"
+    },
+    {
+      "href": "/",
+      "text": "Home"
     }
   ]
 }
