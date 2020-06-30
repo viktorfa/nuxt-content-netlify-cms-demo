@@ -1,0 +1,22 @@
+backend: 
+    branch: master
+    name: github
+    repo: viktorfa/nuxt-content-netlify-cms-demo
+    
+media_folder: static/media
+public_folder: /media
+
+collections:
+    - name: "blog" # Used in routes, e.g., /admin/collections/blog
+      label: "Blog posts" # Used in the UI
+      label_singular: "Blog post" # Used in the UI
+      folder: "content/blog" # The path to the folder where the documents are stored
+      create: true # Allow users to create new documents in this collection
+      slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+      fields: # The fields for each document, usually in front matter
+        - {label: "Title", name: "title", widget: "string", hint: "Title shown in links to this blog post. The header is set in 'body'"}
+        - {label: "Publish Date", name: "date", widget: "datetime", hint: "Date that might be shown for this blog post."}
+        - {label: "Featured Image", name: "thumbnail", widget: "image", hint: "Image for this blog post."}
+        - {label: "Body", name: "body", widget: "markdown", hint: "All the content of the blog post."}
+        - {label: "Is draft", name: "draft", widget: "boolean", hint: "Drafts will not show on the website.", default: false}
+        
